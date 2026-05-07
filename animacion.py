@@ -16,7 +16,7 @@ rojo = (255,0,0)
 azul = (0,0,255)
 
 # variable de movimiento
-XX = 300
+XX = 400
 MOVIMIENTO = 3
 
 # Objeto para la gestión del tiempo
@@ -26,7 +26,7 @@ clock = pygame.time.Clock()
 # bucle principal del juego
 while True:
     # Maximo de fotogramas por segundo
-    clock.tick(50)
+    clock.tick(1)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -37,15 +37,15 @@ while True:
     # movimiento del rectángulo
     XX = XX + MOVIMIENTO
 
-    if XX >= 320:
-        XX = 320
+    if XX >= 400:
+        XX = 400
         MOVIMIENTO = -3
     elif XX <= 0:
         XX = 0
         MOVIMIENTO = 3
 
     # dibujar rectangulo en ventana
-    pygame.draw.rect(ventana, rojo, (XX,100,80,80))
+    pygame.draw.circle(ventana, rojo, (XX,100,80,80))
 
     # actualizar visualización de la ventana
     pygame.display.flip()
