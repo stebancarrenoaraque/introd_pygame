@@ -131,11 +131,11 @@ while True:
     pygame.draw.polygon(ventana,blanco,[(200,560),(260,500),(320,560)])
     pygame.draw.rect(ventana, negro, (235,590,50,30))
 
-    pygame.draw.rect(ventana, rojo, (400,560,120,80))
-    pygame.draw.polygon(ventana,blanco,[(400,560),(460,500),(520,560)])
-    pygame.draw.rect(ventana, negro, (435,590,50,30))
+    pygame.draw.rect(ventana, azul, (600,560,120,80))
+    pygame.draw.polygon(ventana,blanco,[(600,560),(660,500),(720,560)])
+    pygame.draw.rect(ventana, negro, (635,590,50,30))
 
-    pygame.draw.rect(ventana, rojo, (400,560,120,80))
+    pygame.draw.rect(ventana, rosado, (400,560,120,80))
     pygame.draw.polygon(ventana,blanco,[(400,560),(460,500),(520,560)])
     pygame.draw.rect(ventana, negro, (435,590,50,30))
 
@@ -165,6 +165,12 @@ while True:
 
     # sol
     pygame.draw.circle(ventana, dorado, (1080,0),100,0)
+
+    # Nombre
+    fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
+    texto = fuente_arial.render("Steban Carreño Araque", 1, negro)
+    ventana.blit(texto, (0,50))
+
 
     # actualizar visualización de la ventana
     pygame.display.flip()
